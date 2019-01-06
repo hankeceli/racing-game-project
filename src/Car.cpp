@@ -30,9 +30,9 @@ int Car::carType(int carType) {
         carColor=getcarColor();
     }
     else if (carType==1){
-        carLen=7;
-        carWid=2;
-        choosenLength=7;
+        carLen=6;
+        carWid=4;
+        choosenLength=5;
         choosenWidth=2;
         carColor=getcarColor();
     }
@@ -83,7 +83,6 @@ void Car::setcarColor(int Color) {
 }
 
 void Car::carShowup(int x,int y) {
-    waitkey;
     int i,j;
     setColor(carColor);
     setBackgroundColor(carColor);
@@ -124,7 +123,7 @@ void Car::gameCarremove(int x, int y) {
         choosenColor=carColor;
         choosenLength=carLen;
     }
-    setBackgroundColor(0);
+    setBackgroundColor(7);
     locate(x,y);
     int i,j;
     for(i=0;i<choosenLength;i++){
@@ -134,7 +133,7 @@ void Car::gameCarremove(int x, int y) {
         }
         cout << endl;
     }
-    setBackgroundColor(0);
+    setBackgroundColor(7);
 
     setColor(15);
 
