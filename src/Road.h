@@ -1,5 +1,7 @@
 #include <iostream>
 #include "rlutil.h"
+#include "Car.h"
+
 using namespace std;
 #ifndef ROAD_H_
 #define ROAD_H_
@@ -14,6 +16,8 @@ using namespace std;
         void roadBorder();
         void topMenu();
         void roadStopper();
+        void enemyCar(Car& a,int,int);
+        void enemyCarremove(Car& b,int, int);
 
     private:
         int totalWidth=80;

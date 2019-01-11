@@ -8,9 +8,9 @@ using namespace std;
 using namespace rlutil;
 #define waitkey rlutil::anykey(" ")
 
-int choosenColor;
-int choosenLength;
-int choosenWidth;
+int choosenColor=4;
+int choosenLength=5;
+int choosenWidth=5;
 int controller=0;
 
 Car::Car() {
@@ -117,6 +117,8 @@ void Car::gameCar(int x, int y) {
 
 }
 
+
+
 void Car::gameCarremove(int x, int y) {
     if(controller==0){
         choosenWidth=carWid;
@@ -138,6 +140,7 @@ void Car::gameCarremove(int x, int y) {
     setColor(15);
 
 }
+
 
 
 

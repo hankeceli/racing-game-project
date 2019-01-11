@@ -3,6 +3,8 @@
 //
 #include <iostream>
 #include "rlutil.h"
+
+
 using namespace std;
 #ifndef CAR_H_
 #define CAR_H_
@@ -22,6 +24,8 @@ using namespace std;
         void setcarWidth(int);
         int getcarColor();
         void setcarColor(int);
+        friend class Road;
+
 
     private:
         int carLen;

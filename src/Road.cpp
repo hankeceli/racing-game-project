@@ -12,11 +12,7 @@ using namespace rlutil;
 #define waitkey rlutil::anykey("")
 
 
-Road::Road() {
-
-
-}
-
+Road::Road() = default;
 
 
 void Road::grass() {
@@ -101,3 +97,45 @@ void Road::topMenu() {
     }
 
 }
+
+void Road::enemyCar(Car& a,int x, int y) {
+    int len=a.carLen;
+    int wid=a.carWid;
+    int col=0;
+
+    int i,j;
+    setColor(col);
+    setBackgroundColor(col);
+    for(i=0;i<len;i++){
+        for(j=0;j<wid;j++){
+            locate(x+j,y+i);
+            cout << " ";
+        }
+        cout << endl;
+    }
+    setBackgroundColor(0);
+
+    setColor(15);
+}
+
+void Road::enemyCarremove(Car& b, int x, int y) {
+
+    setBackgroundColor(7);
+    locate(x,y);
+    int i,j;
+    for(i=0;i<b.carLen;i++){
+        for(j=0;j<b.carWid;j++){
+            locate(x+j,y+i);
+            cout << " ";
+        }
+        cout << endl;
+    }
+    setBackgroundColor(7);
+
+    setColor(15);
+
+
+}
+
+
+
